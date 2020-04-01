@@ -43,7 +43,7 @@ public class BalanceInfo {
     }
 
     private void setMatcher(int index) {
-        Pattern pattern = Pattern.compile("\\d+");
+        Pattern pattern = Pattern.compile("-\\d+|\\d+");
         // передаем в матчер строку с текстом последние 4 цифры и баланс счета
         this.matcher = pattern.matcher($(".CardList_cardBlock__gEjoa").findAll(".list__item").
                 get(index).find(By.tagName("div")).text());
